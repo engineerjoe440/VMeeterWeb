@@ -1,18 +1,36 @@
-import Knob from './knob';
+
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { CssBaseline } from '@mui/material';
+
+import VoiceMeeterAppBar from './AppBar';
+import InputChannel from './InputChannel';
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <Knob
-          size={50}
-          numTicks={7}
-          degrees={260}
-          min={1}
-          max={100}
-          value={30}
-        />
-    </div>
+    <ThemeProvider theme={createTheme(
+      {
+        palette: {
+          mode: 'dark',
+          // Voicemeeter Colors
+          primary: {
+            main: '#36495A',
+          },
+          background: {
+              default: '#2C3D4D',
+              paper: '#122029',
+            },
+        }
+      }
+    )}>
+      <CssBaseline />
+      <div className="App">
+        <VoiceMeeterAppBar />
+        <InputChannel />
+        <InputChannel />
+      </div>
+    </ThemeProvider>
   );
 }
 
