@@ -1,3 +1,7 @@
+# Ignore Built Static and Templates
+backend/static/
+backend/templates/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
