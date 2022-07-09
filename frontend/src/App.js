@@ -1,5 +1,6 @@
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
 import { CssBaseline } from '@mui/material';
 
 import VoiceMeeterAppBar from './AppBar';
@@ -19,7 +20,8 @@ function App() {
           },
           background: {
               default: '#2C3D4D',
-              paper: '#122029',
+              paper: '#36495A',
+              // paper: '#122029',
             },
         }
       }
@@ -27,8 +29,14 @@ function App() {
       <CssBaseline />
       <div className="App">
         <VoiceMeeterAppBar />
-        <InputChannel />
-        <InputChannel />
+        <Box display="flex" height="100%" sx={{
+          display: 'grid',
+          gap: 0.2,
+          gridTemplateColumns: 'repeat(4, 1fr)'
+        }}>
+          <InputChannel />
+          <InputChannel />
+        </Box>
       </div>
     </ThemeProvider>
   );
