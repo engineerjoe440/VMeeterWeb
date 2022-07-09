@@ -8,7 +8,6 @@
  import Grid from '@mui/material/Grid';
  import Box from '@mui/material/Box';
  import Paper from '@mui/material/Paper';
- import Stack from '@mui/material/Stack';
  import Slider from '@mui/material/Slider';
  import { styled } from '@mui/material/styles';
  
@@ -97,7 +96,7 @@ export default function InputChannel() {
             </div>
           </Box>
         </Grid>
-        <Grid item pt={3} xs={12}>
+        <Grid item pt={5} xs={12}>
           <Box
             sx={{ height: '60vh', flexGrow: 1 }}
             spacing={1}
