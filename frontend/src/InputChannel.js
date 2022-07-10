@@ -98,7 +98,7 @@ export default function InputChannel() {
         </Grid>
         <Grid item pt={5} xs={12}>
           <Box
-            sx={{ height: '60vh', flexGrow: 1 }}
+            sx={{ height: '56vh', flexGrow: 1 }}
             spacing={1}
             direction="row"
             justify="center"
