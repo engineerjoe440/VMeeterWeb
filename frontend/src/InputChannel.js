@@ -69,9 +69,19 @@ export default function InputChannel() {
         <Grid item m={1} xs={12}>
           <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}>
             <div>
+              <Knob
+                  size={50}
+                  numTicks={7}
+                  degrees={260}
+                  min={1}
+                  max={100}
+                  value={30}
+              />
               <Typography sx={{ flexGrow: 1 }}>
                 Comp.
               </Typography>
+            </div>
+            <div>
               <Knob
                   size={50}
                   numTicks={7}
@@ -80,19 +90,9 @@ export default function InputChannel() {
                   max={100}
                   value={30}
               />
-            </div>
-            <div>
               <Typography sx={{ flexGrow: 1 }}>
                 Gate
               </Typography>
-              <Knob
-                  size={50}
-                  numTicks={7}
-                  degrees={260}
-                  min={1}
-                  max={100}
-                  value={30}
-              />
             </div>
           </Box>
         </Grid>
