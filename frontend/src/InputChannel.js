@@ -9,10 +9,11 @@
  import Box from '@mui/material/Box';
  import Paper from '@mui/material/Paper';
  import Slider from '@mui/material/Slider';
+import { Typography } from '@mui/material';
  import { styled } from '@mui/material/styles';
  
 import Knob from './knob';
-import { Typography } from '@mui/material';
+import BusSelection from './BusSelect';
 
 
 const VoiceMeeterSlider = styled(Slider)({
@@ -69,41 +70,59 @@ export default function InputChannel() {
         <Grid item m={1} xs={12}>
           <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}>
             <div>
-              <Knob
-                  size={50}
-                  numTicks={7}
-                  degrees={260}
-                  min={1}
-                  max={100}
-                  value={30}
-              />
-              <Typography sx={{ flexGrow: 1 }}>
-                Comp.
-              </Typography>
+              <Box
+                m={0}
+                p={1}
+                display="flex"
+                justifyContent="flex-start"
+                alignItems="flex-start"
+              >
+                <Knob
+                    size={50}
+                    numTicks={7}
+                    degrees={260}
+                    min={1}
+                    max={100}
+                    value={30}
+                />
+              </Box>
+              <Typography mt={2} sx={{ flexGrow: 1 }}>Comp.</Typography>
             </div>
             <div>
-              <Knob
-                  size={50}
-                  numTicks={7}
-                  degrees={260}
-                  min={1}
-                  max={100}
-                  value={30}
-              />
-              <Typography sx={{ flexGrow: 1 }}>
-                Gate
-              </Typography>
+              <Box
+                mr={2}
+                p={1}
+                display="flex"
+                justifyContent="flex-end"
+                alignItems="flex-end"
+              >
+                <Knob
+                    size={50}
+                    numTicks={7}
+                    degrees={260}
+                    min={1}
+                    max={100}
+                    value={30}
+                />
+              </Box>
+              <Typography mt={2} sx={{ flexGrow: 1 }}>Gate</Typography>
             </div>
           </Box>
         </Grid>
-        <Grid item pt={5} xs={12}>
+        <Grid item pt={0} xs={12}>
           <Box
-            sx={{ height: '56vh', flexGrow: 1 }}
+            sx={{
+              height: '58vh',
+              flexGrow: 1,
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)'
+            }}
             spacing={1}
             direction="row"
             justify="center"
             alignItems="center"
           >
+            <div/>
             <VoiceMeeterSlider
               aria-label="Line"
               orientation="vertical"
@@ -113,6 +132,7 @@ export default function InputChannel() {
               getAriaValueText={valuetext}
               valueLabelDisplay="auto"
             />
+            <BusSelection />
           </Box>
         </Grid>
        </Paper>

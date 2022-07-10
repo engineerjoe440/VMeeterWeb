@@ -5,6 +5,7 @@ import { CssBaseline } from '@mui/material';
 
 import VoiceMeeterAppBar from './AppBar';
 import InputChannel from './InputChannel';
+import VirtualInputs from './VirtualInputs';
 import './App.css';
 
 
@@ -32,10 +33,12 @@ function App() {
         <Box display="flex" height="100%" sx={{
           display: 'grid',
           gap: 0.2,
-          gridTemplateColumns: 'repeat(4, 1fr)'
+          gridTemplateColumns: 'repeat(5, 1fr)'
         }}>
           <InputChannel />
           <InputChannel />
+          <InputChannel />
+          <VirtualInputs />
         </Box>
       </div>
     </ThemeProvider>
